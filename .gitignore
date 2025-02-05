@@ -26,6 +26,8 @@ mono_crash.*
 # Visual Paradigm files
 *.vpp.bak*
 *.vux
+*.vpp.vbak
+*.vpp.lck
 
 # Build results
 [Dd]ebug/
