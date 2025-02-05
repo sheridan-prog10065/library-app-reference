@@ -6,9 +6,17 @@
     xmlns:local="clr-namespace:LibraryAppInteractive"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Library App"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Browse" Icon="library.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:LibraryBrowsePage}"
+                Route="LibraryBrowsePage" />
+        </Tab>
+        <Tab Title="Admin" Icon="admin.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:LibraryAdminPage}"
+                Route="LibraryAdminPage" />    
+        </Tab>
+    </TabBar>
 
 </Shell>

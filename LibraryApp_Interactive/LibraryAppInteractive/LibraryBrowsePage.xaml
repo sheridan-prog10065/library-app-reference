@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LibraryAppInteractive.MainPage"
-             Shell.NavBarIsVisible="False">
+             x:Class="LibraryAppInteractive.LibraryBrowsePage"
+             Title="Browse Interactive Library">
 			 
-	<Label Text="Template MAUI Project for the Interactive Library App"
+	<Label Text="Browse Library page for the Interactive Library App"
 	       HorizontalOptions="Center"
 	       VerticalOptions="Center"/> 
 </ContentPage>
