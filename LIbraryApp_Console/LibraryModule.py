@@ -27,6 +27,9 @@ class Library:
     BOOK_TYPE_DIGITAL = 2
     BOOK_TYPE_AUDIO = 3
 
+    """constant for the initial starting point for library asset IDs"""
+    DEFAULT_LIBID_START = 100
+
     def __init__(self):
         """Initialize the field variables of the library collection object"""
         
@@ -34,7 +37,7 @@ class Library:
         self._bookList = []
 
         #define the starting point for the IDs given to library assets
-        self.LIBID_GENERATOR_SEED = 100
+        self._libIDGeneratorSeed = Library.DEFAULT_LIBID_START
 
         #create default books that are part of the library inventory
         self.createDefaultBooks()
@@ -115,8 +118,8 @@ class Library:
         
            The method will raise an AssertError if the user chooses to terminate.
         """   
-        libId = self.LIBID_GENERATOR_SEED
-        self.LIBID_GENERATOR_SEED += 1   
+        libId = self._libIDGeneratorSeed
+        self._libIDGeneratorSeed += 1   
         return libId
 
     def registerBook(self, bookName, bookISBN, authors, bookType, nCopies):
